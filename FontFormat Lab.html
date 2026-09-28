@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FontFormat Lab</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiByeD0iNCIgZmlsbD0iI0VBRUFFQSIvPgo8cGF0aCBkPSJNOC43MTIgMzcuODI0QzcuNzA0IDM3LjgyNCA2LjkwMTMzIDM3LjU4MTMgNi4zMDQgMzcuMDk2QzUuNzA2NjcgMzYuNjI5MyA1LjQwOCAzNi4wMDQgNS40MDggMzUuMjJDNS40MDggMzQuNTg1MyA1LjU4NTMzIDM0LjA2MjcgNS45NCAzMy42NTJDNi4yOTQ2NyAzMy4yNDEzIDYuNzYxMzMgMzMuMDM2IDcuMzQgMzMuMDM2QzcuNzY5MzMgMzMuMDM2IDguMTA1MzMgMzMuMTU3MyA4LjM0OCAzMy40QzguNTkwNjcgMzMuNjQyNyA4LjcxMiAzMy45NDEzIDguNzEyIDM0LjI5NkM4LjcxMiAzNC41MDEzIDguNjg0IDM0LjY4OCA4LjYyOCAzNC44NTZDOC41NTMzMyAzNS4wMjQgOC40NjkzMyAzNS4xOTIgOC4zNzYgMzUuMzZDOC4zMDEzMyAzNS40NzIgOC4yNDUzMyAzNS41OTMzIDguMjA4IDM1LjcyNEM4LjE1MiAzNS44NTQ3IDguMTI0IDM1Ljk4NTMgOC4xMjQgMzYuMTE2QzguMTI0IDM2LjMyMTMgOC4xOTg2NyAzNi40OCA4LjM0OCAzNi41OTJDOC40OTczMyAzNi43MjI3IDguNzEyIDM2Ljc4OCA4Ljk5MiAzNi43ODhDOS40MDI2NyAzNi43ODggOS43NjY2NyAzNi42NDggMTAuMDg0IDM2LjM2OEMxMC40MiAzNi4wODggMTAuNzM3MyAzNS41OTMzIDExLjAzNiAzNC44ODRDMTEuMzUzMyAzNC4xNzQ3IDExLjY1MiAzMy4xNjY3IDExLjkzMiAzMS44NkwxNC40NTIgMjAuOTRDMTQuNjU3MyAyMC4wNDQgMTQuMzMwNyAxOS41OTYgMTMuNDcyIDE5LjU5NkgxMS44NDhMMTIuMjEyIDE4SDE1LjE1MkwxNS41NDQgMTYuMzJDMTUuOTM2IDE0LjU4NCAxNi42ODI3IDEzLjIxMiAxNy43ODQgMTIuMjA0QzE4Ljg4NTMgMTEuMTk2IDIwLjE4MjcgMTAuNjkyIDIxLjY3NiAxMC42OTJDMjIuNzc3MyAxMC42OTIgMjMuNjY0IDEwLjk2MjcgMjQuMzM2IDExLjUwNEMyNS4wMjY3IDEyLjA0NTMgMjUuMzcyIDEyLjc0NTMgMjUuMzcyIDEzLjYwNEMyNS4zNzIgMTQuMjM4NyAyNS4yMDQgMTQuNzUyIDI0Ljg2OCAxNS4xNDRDMjQuNTUwNyAxNS41MzYgMjQuMTQgMTUuNzMyIDIzLjYzNiAxNS43MzJDMjMuMTg4IDE1LjczMiAyMi44MjQgMTUuNjIgMjIuNTQ0IDE1LjM5NkMyMi4yNjQgMTUuMTcyIDIyLjEyNCAxNC44NjQgMjIuMTI0IDE0LjQ3MkMyMi4xMjQgMTQuMzIyNyAyMi4xNTIgMTQuMTY0IDIyLjIwOCAxMy45OTZDMjIuMjY0IDEzLjgyOCAyMi4zMiAxMy42NjkzIDIyLjM3NiAxMy41MkMyMi41NDQgMTMuMTg0IDIyLjYyOCAxMi45MDQgMjIuNjI4IDEyLjY4QzIyLjYyOCAxMi40IDIyLjUyNTMgMTIuMTc2IDIyLjMyIDEyLjAwOEMyMi4xMTQ3IDExLjg0IDIxLjgzNDcgMTEuNzU2IDIxLjQ4IDExLjc1NkMyMC42NzczIDExLjc1NiAxOS45OTYgMTIuMTIgMTkuNDM2IDEyLjg0OEMxOC44OTQ3IDEzLjU1NzMgMTguNDY1MyAxNC41ODQgMTguMTQ4IDE1LjkyOEwxNy42NDQgMThIMjQuNDJMMjQuNzg0IDE2LjQ4OEMyNS4xOTQ3IDE0LjY3NzMgMjYuMDM0NyAxMy4yNTg3IDI3LjMwNCAxMi4yMzJDMjguNTczMyAxMS4yMDUzIDMwLjExMzMgMTAuNjkyIDMxLjkyNCAxMC42OTJDMzMuMTM3MyAxMC42OTIgMzQuMTA4IDEwLjk1MzMgMzQuODM2IDExLjQ3NkMzNS41NjQgMTEuOTk4NyAzNS45MjggMTIuNzA4IDM1LjkyOCAxMy42MDRDMzUuOTI4IDE0LjIzODcgMzUuNzYgMTQuNzUyIDM1LjQyNCAxNS4xNDRDMzUuMTA2NyAxNS41MzYgMzQuNjk2IDE1LjczMiAzNC4xOTIgMTUuNzMyQzMzLjc0NCAxNS43MzIgMzMuMzggMTUuNjIgMzMuMSAxNS4zOTZDMzIuODIgMTUuMTcyIDMyLjY4IDE0Ljg2NCAzMi42OCAxNC40NzJDMzIuNjggMTQuMzIyNyAzMi43MDggMTQuMTY0IDMyLjc2NCAxMy45OTZDMzIuODIgMTMuODI4IDMyLjg3NiAxMy42NjkzIDMyLjkzMiAxMy41MkMzMy4xIDEzLjE4NCAzMy4xODQgMTIuOTA0IDMzLjE4NCAxMi42OEMzMy4xODQgMTIuNCAzMy4wNjI3IDEyLjE3NiAzMi44MiAxMi4wMDhDMzIuNTc3MyAxMS44NCAzMi4yNTA3IDExLjc1NiAzMS44NCAxMS43NTZDMzAuNzM4NyAxMS43NTYgMjkuNzk2IDEyLjEzODcgMjkuMDEyIDEyLjkwNEMyOC4yNDY3IDEzLjY1MDcgMjcuNjk2IDE0LjcxNDcgMjcuMzYgMTYuMDk2TDI2LjkxMiAxOEgzMS4wNTZMMzAuNjkyIDE5LjU5NkgyNi41MkwyNC4wODQgMzAuMjY0QzIzLjQ0OTMgMzMuMDI2NyAyMi42MTg3IDM0Ljk3NzMgMjEuNTkyIDM2LjExNkMyMC41ODQgMzcuMjU0NyAxOS4zOCAzNy44MjQgMTcuOTggMzcuODI0QzE2Ljk3MiAzNy44MjQgMTYuMTY5MyAzNy41ODEzIDE1LjU3MiAzNy4wOTZDMTQuOTc0NyAzNi42MjkzIDE0LjY3NiAzNi4wMDQgMTQuNjc2IDM1LjIyQzE0LjY3NiAzNC41ODUzIDE0Ljg1MzMgMzQuMDYyNyAxNS4yMDggMzMuNjUyQzE1LjU2MjcgMzMuMjQxMyAxNi4wMjkzIDMzLjAzNiAxNi42MDggMzMuMDM2QzE3LjA1NiAzMy4wMzYgMTcuMzkyIDMzLjE1NzMgMTcuNjE2IDMzLjRDMTcuODU4NyAzMy42NDI3IDE3Ljk4IDMzLjk0MTMgMTcuOTggMzQuMjk2QzE3Ljk4IDM0LjUwMTMgMTcuOTQyNyAzNC42ODggMTcuODY4IDM0Ljg1NkMxNy44MTIgMzUuMDI0IDE3LjczNzMgMzUuMTkyIDE3LjY0NCAzNS4zNkMxNy41NjkzIDM1LjQ3MiAxNy41MDQgMzUuNTkzMyAxNy40NDggMzUuNzI0QzE3LjQxMDcgMzUuODU0NyAxNy4zOTIgMzUuOTg1MyAxNy4zOTIgMzYuMTE2QzE3LjM5MiAzNi4zMjEzIDE3LjQ2NjcgMzYuNDggMTcuNjE2IDM2LjU5MkMxNy43NjUzIDM2LjcyMjcgMTcuOTggMzYuNzg4IDE4LjI2IDM2Ljc4OEMxOC42NzA3IDM2Ljc4OCAxOS4wMzQ3IDM2LjY0OCAxOS4zNTIgMzYuMzY4QzE5LjY4OCAzNi4wODggMjAuMDA1MyAzNS41OTMzIDIwLjMwNCAzNC44ODRDMjAuNjIxMyAzNC4xNzQ3IDIwLjkyIDMzLjE2NjcgMjEuMiAzMS44NkwyMy43MiAyMC45NEMyMy45MjUzIDIwLjA0NCAyMy41OTg3IDE5LjU5NiAyMi43NCAxOS41OTZIMTcuMjUyTDE0LjgxNiAzMC4yNjRDMTQuMTgxMyAzMy4wMjY3IDEzLjM1MDcgMzQuOTc3MyAxMi4zMjQgMzYuMTE2QzExLjMxNiAzNy4yNTQ3IDEwLjExMiAzNy44MjQgOC43MTIgMzcuODI0Wk0zMy40MzYgMzIuMjI0QzMyLjIyMjcgMzIuMjI0IDMxLjM3MzMgMzEuODYgMzAuODg4IDMxLjEzMkMzMC40MDI3IDMwLjM4NTMgMzAuMyAyOS40NDI3IDMwLjU4IDI4LjMwNEwzNC4wOCAxNC41QzM0LjIxMDcgMTQuMDMzMyAzNC4yMiAxMy42OTczIDM0LjEwOCAxMy40OTJDMzQuMDE0NyAxMy4yNjggMzMuOCAxMy4xNTYgMzMuNDY0IDEzLjE1NkgzMy4zMjRMMzMuNjg4IDExLjU2SDM2Ljg4TDM3LjI0NCAxMS44OTZMMzMuMDE2IDI4LjQxNkMzMi44MjkzIDI5LjE0NCAzMi44Mzg3IDI5LjY4NTMgMzMuMDQ0IDMwLjA0QzMzLjI2OCAzMC4zNzYgMzMuNjEzMyAzMC41NDQgMzQuMDggMzAuNTQ0QzM0LjQ1MzMgMzAuNTQ0IDM0Ljc2MTMgMzAuNDIyNyAzNS4wMDQgMzAuMThDMzUuMjQ2NyAyOS45MTg3IDM1LjQ3MDcgMjkuNTQ1MyAzNS42NzYgMjkuMDZMMzYuNzk2IDI2LjU2OEgzOC4yOEwzNy4xMzIgMjkuMjg0QzM2LjcyMTMgMzAuMjU0NyAzNi4yMTczIDMwLjk5MiAzNS42MiAzMS40OTZDMzUuMDQxMyAzMS45ODEzIDM0LjMxMzMgMzIuMjI0IDMzLjQzNiAzMi4yMjRaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+<style>
+/* ---- tokens: every colour lives here ---- */
+:root{
+  --bg:#fafafa;        /* page */
+  --ink:#000000;       /* text, rules, primary buttons */
+  --mute:#7b7b7b;      /* secondary text */
+  --line:#e0e0e0;      /* hairlines inside sections */
+  --tile:#ededed;      /* grey frames: tiles, panels, cards */
+  --tile-2:#e2e2e2;    /* hover on grey frames */
+  --accent:#ff2f00;    /* download, warnings */
+  --alert:#ff2f00;
+  --max:1680px;
+  --gut:56px;          /* minimum side margin */
+  --bar:64px;
+  --ui:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+@media (max-width:900px){:root{--gut:20px}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--bar) + 24px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.45 var(--ui);-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+main{flex:1;padding-bottom:120px}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0;padding:0}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.hidden{display:none!important}
+.mute{color:var(--mute)}
+.wrap{width:100%;max-width:calc(var(--max) + 2 * var(--gut));margin:0 auto;padding:0 var(--gut)}
+
+/* ---- sticky product bar ---- */
+.pbar{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--line)}
+.pbar .wrap{height:var(--bar);display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:24px}
+.crumb{display:flex;gap:10px;min-width:0;font-size:18px;letter-spacing:-.01em}
+.crumb b{font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crumb span{color:var(--mute)}
+.pbar .nav{font-size:14px;gap:24px;transition:opacity .2s}
+
+.pbar-r{display:flex;justify-content:flex-end;align-items:center;gap:10px}
+
+/* ---- buttons ---- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:40px;padding:0 20px;border-radius:999px;border:1px solid var(--ink);white-space:nowrap;background:var(--bg);transition:background .15s,color .15s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn.solid{background:var(--ink);color:var(--bg)}
+.btn.solid:hover{background:transparent;color:var(--ink)}
+.btn.sm{height:32px;padding:0 14px;font-size:13px}
+.btn.accent{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.accent:hover{background:#d92800;border-color:#d92800;color:#fff}
+.btn[disabled]{opacity:.3;pointer-events:none}
+.seg{display:inline-flex;flex-wrap:wrap;gap:6px}
+.seg button{height:32px;padding:0 14px;border-radius:999px;border:1px solid var(--line);font-size:13px;background:var(--bg)}
+.seg button:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* ---- welcome ---- */
+#hero{min-height:calc(100vh - var(--bar));display:grid;place-items:center;padding:40px 0}
+.dropzone{width:min(640px,100%);border:1px dashed var(--ink);border-radius:24px;padding:56px 40px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px;transition:background .15s}
+.dropzone:hover{background:var(--tile)}
+.dropzone h1{font-size:26px;font-weight:500;letter-spacing:-.02em;margin:0}
+.dropzone p{margin:0;color:var(--mute);max-width:44ch}
+.or{color:var(--mute);font-size:13px}
+
+/* ---- sections ---- */
+.sec{padding-top:112px}
+.sec:first-child{padding-top:56px}
+.sec-head{border-top:1px solid var(--ink);padding-top:18px;display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:16px 32px;margin-bottom:48px}
+h2{font-size:clamp(28px,2.6vw,40px);font-weight:500;letter-spacing:-.025em;line-height:1.05;margin:0}
+.sub{color:var(--mute);margin:10px 0 0;max-width:62ch}
+.head-r{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px}
+.opt{display:flex;align-items:center;gap:10px}
+.opt>span{color:var(--mute);font-size:13px}
+
+/* styles + names side by side */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+@media (max-width:1200px){.split{grid-template-columns:1fr;gap:0}.split>#names{padding-top:112px}}
+.head-l{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-top:20px}
+.logo{font-weight:500;letter-spacing:-.01em;white-space:nowrap}
+.nav{display:flex;gap:30px}
+.nav a{position:relative;transition:opacity .15s}
+.nav a:hover{opacity:.5}
+.nav a[aria-current="true"]::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:currentColor}
+#engine{color:var(--mute);font-size:13px;white-space:nowrap}
+#engine.err{color:var(--alert)}
+
+/* styles list */
+#clash{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;background:var(--tile);border-radius:16px;padding:16px 20px;margin-bottom:24px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--alert);margin-right:10px;vertical-align:1px}
+.row{display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);cursor:pointer;position:relative}
+.list .row:first-child{border-top:1px solid var(--line)}
+.row:hover .sample{opacity:.6}
+.row.active .sample{opacity:1}
+.check{width:18px;height:18px;border:1px solid var(--ink);border-radius:5px;display:grid;place-items:center}
+.check[aria-checked="true"]{background:var(--ink)}
+.check[aria-checked="true"]::after{content:"";width:8px;height:4px;border:solid var(--bg);border-width:0 0 2px 2px;transform:rotate(-45deg) translate(1px,-1px)}
+.sample{font-size:clamp(28px,2.4vw,44px);line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-synthesis:none;font-weight:400;transition:opacity .15s;}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;font-family:var(--ui);font-size:12px}
+.tag{height:22px;display:inline-flex;align-items:center;padding:0 9px;border-radius:999px;background:var(--tile)}
+.tag.plain{background:none;padding-left:0;color:var(--mute)}
+.tag.warn{background:var(--accent);color:#fff}
+.tag.edit{border:1px solid var(--ink);background:none}
+.row-act{display:flex;gap:6px}
+.icon{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);background:var(--bg)}
+.icon:hover,.icon:active{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.icon svg{width:16px;height:16px}
+.adder{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:20px 0;color:var(--mute)}
+
+/* tester */
+.tester-grid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:56px;align-items:start}
+@media (max-width:1000px){.tester-grid{grid-template-columns:1fr}}
+#tester{min-height:360px;outline:none;font-synthesis:none;font-weight:400;overflow-wrap:anywhere;white-space:pre-wrap;padding:0 0 24px}
+#tester .alt{border-radius:4px;box-shadow:inset 0 -3px 0 var(--tile-2)}
+.panel{position:sticky;top:calc(var(--bar) + 24px);background:var(--tile);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:22px}
+.ctl label,.ctl .lab{display:flex;justify-content:space-between;font-size:13px;margin-bottom:10px}
+.ctl label span:last-child,.ctl .lab span:last-child{color:var(--mute);font-variant-numeric:tabular-nums}
+.panel .seg button{background:transparent;border-color:#cfcfcf}
+.panel .seg button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:18px;background:transparent;margin:0}
+input[type=range]::-webkit-slider-runnable-track{height:1px;background:var(--ink)}
+input[type=range]::-moz-range-track{height:1px;background:var(--ink)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:var(--ink);margin-top:-7px}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;border:0;border-radius:50%;background:var(--ink)}
+.group-title{font-size:13px;color:var(--mute);margin:0 0 14px;padding-top:20px;border-top:1px solid #d6d6d6}
+.tester-note{margin:0 0 12px;color:var(--mute)}
+
+/* tester family pill + style dropdown */
+.fam-pill{height:40px;padding:0 22px;border-radius:999px;background:var(--accent);color:#000;display:inline-flex;align-items:center;font-size:14px;white-space:nowrap}
+.dd{position:relative}
+.dd-btn{height:40px;min-width:180px;padding:0 20px 0 24px;border-radius:999px;background:#fff;display:flex;align-items:center;justify-content:space-between;gap:28px;font-size:14px;white-space:nowrap;transition:background .15s,color .15s}
+.dd-btn:hover,.dd-btn[aria-expanded="true"]{background:var(--ink);color:var(--bg)}
+.dd-btn[disabled]{cursor:default;background:#fff;color:var(--ink)}
+.dd-btn[disabled] .dd-arr{visibility:hidden}
+.dd-menu{position:absolute;top:46px;left:0;z-index:40;min-width:100%;background:#fff;border-radius:18px;padding:6px;box-shadow:0 10px 32px rgba(0,0,0,.12);max-height:380px;overflow:auto}
+.dd-menu button{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;padding:9px 16px;border-radius:12px;text-align:left;white-space:nowrap;font-size:14px}
+.dd-menu button:hover{background:var(--ink);color:var(--bg)}
+.dd-menu button[aria-selected="true"]{background:var(--tile)}
+.dd-menu button[aria-selected="true"]:hover{background:var(--ink)}
+.dd-group{font-size:12px;color:var(--mute);padding:10px 16px 4px}
+
+/* features */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.tile{background:var(--tile);border-radius:20px;padding:20px;text-align:left;display:flex;flex-direction:column;gap:16px;min-height:180px;transition:background .15s}
+.tile:hover{background:var(--tile-2)}
+.tile[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.tile-top{display:flex;justify-content:space-between;gap:10px;font-size:13px}
+.tile-top span:last-child{opacity:.5}
+.demo{margin-top:auto;font-size:32px;line-height:1.15;display:flex;align-items:baseline;gap:14px;white-space:nowrap;overflow:hidden;font-synthesis:none;font-weight:400}
+.demo>span{overflow:hidden}
+.demo .arr{font-family:var(--ui);font-size:16px;opacity:.45}
+
+/* glyphs */
+.glyph-wrap{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:32px;align-items:start}
+@media (max-width:1000px){.glyph-wrap{grid-template-columns:1fr}}
+.grid-scroll{max-height:min(72vh,760px);overflow:auto;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));border-left:1px solid var(--line)}
+.cell{aspect-ratio:1;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;place-items:center;font-size:30px;position:relative;font-synthesis:none;font-weight:400;overflow:hidden}
+.cell:hover{background:var(--tile)}
+.cell.sel{background:var(--ink);color:var(--bg)}
+.cell.has::after{content:"";position:absolute;top:7px;right:7px;width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.5}
+.glyph-card{position:sticky;top:calc(var(--bar) + 24px);background:var(--tile);border-radius:20px;padding:24px}
+.big{height:260px;display:grid;place-items:center;font-size:180px;line-height:1;font-synthesis:none;font-weight:400;overflow:hidden}
+.alts{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:8px}
+.alt-btn{background:var(--bg);border-radius:14px;padding:12px 6px 10px;display:flex;flex-direction:column;align-items:center;gap:6px;border:1px solid transparent}
+.alt-btn:hover{border-color:var(--ink)}
+.alt-btn .g{font-size:36px;line-height:1.1;font-synthesis:none;font-weight:400}
+.alt-btn small{font-size:11px;color:var(--mute)}
+#glyphSearch{height:32px;border:1px solid var(--line);border-radius:999px;padding:0 14px;width:190px;font-size:13px;background:var(--bg)}
+#glyphSearch:focus{border-color:var(--ink);outline:none}
+
+/* names: description + info column, like the foundry's font description block */
+.names-grid{display:grid;grid-template-columns:1fr;gap:48px}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:22px}
+.field span{font-size:13px;color:var(--mute)}
+.field input{height:52px;border:0;border-bottom:1px solid var(--ink);font-size:28px;letter-spacing:-.02em;padding:0;background:transparent}
+.field input:focus{outline:none;border-bottom-width:2px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.name-acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:32px 24px}
+.info h4{font-size:13px;font-weight:400;color:var(--mute);margin:0 0 8px}
+.info p{margin:0;overflow-wrap:anywhere}
+.info p s{color:var(--mute);display:block;font-size:13px;margin-top:2px}
+.info .wide{grid-column:1/-1}
+.empty-note{color:var(--mute);font-size:16px;margin:0}
+
+/* drop overlay + toasts */
+#drop{position:fixed;inset:12px;z-index:50;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;border:1px dashed var(--ink);border-radius:24px;font-size:26px;font-weight:500;pointer-events:none}
+#toasts{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:60;display:flex;flex-direction:column;align-items:center;gap:8px;width:min(520px,calc(100vw - 32px))}
+.toast{background:var(--ink);color:var(--bg);border-radius:999px;padding:11px 18px;font-size:13px;text-align:center}
+.toast.err{background:var(--alert);border-radius:16px}
+
+@media (max-width:1100px){.pbar .nav{display:none}.pbar .wrap{grid-template-columns:minmax(0,1fr) auto}}
+@media (max-width:900px){#engine{display:none}.pbar #formats{display:none}.sample{padding-right:0}}
+</style>
+</head>
+<body>
+<header class="pbar" id="pbar">
+  <div class="wrap">
+    <div class="crumb"><a class="logo" href="#top">FontFormat Lab</a><span class="has-fonts">/</span><b id="barName" class="has-fonts"></b></div>
+    <nav class="nav has-fonts" aria-label="Sections">
+      <a href="#fonts">Styles &amp; names</a><a href="#tester-sec">Type tester</a><a href="#features">Features</a><a href="#glyphs">Glyphs</a>
+    </nav>
+    <div class="pbar-r">
+      <span id="engine" role="status">Loading engine…</span>
+      <div class="seg has-fonts" id="formats" aria-label="Export formats"></div>
+      <button class="btn accent has-fonts" id="dlBtn" disabled>Download</button>
+    </div>
+  </div>
+</header>
+<input type="file" id="file" multiple accept=".ttf,.otf,.woff,.woff2,.ttc,.otc" class="hidden">
+
+<main id="top">
+  <div class="wrap">
+    <section id="hero">
+      <div class="dropzone" data-pick role="button" tabindex="0" aria-label="Choose font files">
+        <h1>Drop font files here</h1>
+        <span class="or">or</span>
+        <span class="btn solid">Choose files</span>
+        <p>TTF, OTF, WOFF and WOFF2, static or variable. Files stay on your computer.</p>
+      </div>
+    </section>
+
+    <div id="app" class="hidden">
+      <section class="sec split" id="fonts">
+        <div>
+          <div class="sec-head" style="display:block">
+            <h2>Styles</h2><p class="sub" id="fontCount"></p>
+            <div class="head-l">
+              <span class="seg"><button id="selAll">Select all</button><button data-pick>Choose files</button></span>
+              <div class="opt"><span>File name export</span><div class="seg" id="naming"></div></div>
+            </div>
+          </div>
+          <div id="clash" class="hidden"></div>
+          <div class="list" id="list"></div>
+        </div>
+        <div id="names">
+          <div class="sec-head" style="display:block">
+            <h2>Names</h2><p class="sub">Operating systems identify installed fonts by these internal names. Two files with the same PostScript or full name replace each other.</p>
+          </div>
+          <div class="names-grid">
+            <div id="nameForm"></div>
+            <div id="nameInfo"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="tester-sec">
+        <div class="sec-head" style="display:block">
+          <h2 id="testerTitle">Type tester</h2><p class="sub" id="testerSub"></p>
+          <div class="head-l">
+            <span class="fam-pill" id="famPill"></span>
+            <div class="dd" id="styleDD">
+              <button class="dd-btn" aria-haspopup="listbox" aria-expanded="false"><span id="ddLabel"></span><span class="dd-arr" aria-hidden="true">↓</span></button>
+              <div class="dd-menu hidden" role="listbox" id="ddMenu"></div>
+            </div>
+            <span class="seg has-var"><button id="instOne">Add as static font</button><button id="instAll">Add all instances as static fonts</button></span>
+          </div>
+          <div class="head-l"><div class="seg" id="presets"></div></div>
+        </div>
+        <div class="tester-grid">
+          <div>
+            <p class="tester-note hidden" id="previewErr">Your browser can't render this file, so the preview is unavailable. Converting still works.</p>
+            <div id="tester" contenteditable="true" spellcheck="false" aria-label="Type tester, editable"></div>
+          </div>
+          <aside class="panel" aria-label="Tester settings">
+            <div class="ctl"><label for="size"><span>Size</span><span id="sizeV"></span></label><input type="range" id="size" min="12" max="300" step="1"></div>
+            <div class="ctl"><label for="lead"><span>Leading</span><span id="leadV"></span></label><input type="range" id="lead" min="0.7" max="2" step="0.01"></div>
+            <div class="ctl"><label for="track"><span>Tracking</span><span id="trackV"></span></label><input type="range" id="track" min="-0.15" max="0.3" step="0.005"></div>
+            <div class="ctl"><div class="lab"><span>Alignment</span></div><div class="seg" id="align"></div></div>
+            <div id="axesBox"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="sec" id="features">
+        <div class="sec-head">
+          <div><h2 id="featTitle">Features</h2><p class="sub" id="featSub"></p></div>
+          <div class="head-r"><button class="btn sm" id="featReset">Reset features</button></div>
+        </div>
+        <div class="tiles" id="tiles"></div>
+      </section>
+
+      <section class="sec" id="glyphs">
+        <div class="sec-head">
+          <div><h2 id="glyphTitle">Glyphs</h2><p class="sub">Click a character to see its alternates, then click one to add it to the tester.</p></div>
+          <div class="head-r"><div class="seg" id="glyphFilter"></div><input id="glyphSearch" type="search" placeholder="Find a character" aria-label="Find a character"></div>
+        </div>
+        <div class="glyph-wrap">
+          <div><div class="grid-scroll"><div class="grid" id="grid"></div></div><p class="sub" id="gridNote"></p></div>
+          <aside class="glyph-card" id="glyphCard"></aside>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<div id="drop" class="hidden">Drop to add fonts</div>
+<div id="toasts" aria-live="polite"></div>
+<script type="text/x-python" id="engine-py">
+import json, unicodedata, zipfile
+from collections import OrderedDict
+from fontTools.ttLib import TTFont, newTable
+
+WEIGHT_NAMES = {100: "Thin", 200: "ExtraLight", 300: "Light", 400: "Regular", 500: "Medium",
+                600: "SemiBold", 700: "Bold", 800: "ExtraBold", 900: "Black"}
+ALT_PREFIXES = ("ss", "cv")
+ALT_FEATURES = {"salt", "swsh", "titl", "smcp", "c2sc", "pcap", "c2pc", "unic", "onum", "lnum",
+                "tnum", "pnum", "zero", "sups", "subs", "sinf", "ordn", "case", "hist", "nalt",
+                "ornm", "numr", "dnom", "hwid", "fwid", "pwid", "cswh", "aalt", "jalt", "rand"}
+RIBBI = {"regular": "Regular", "italic": "Italic", "bold": "Bold", "bold italic": "Bold Italic"}
+
+
+def _name(font, nid):
+    if "name" not in font or nid is None:
+        return ""
+    rec = font["name"].getDebugName(nid)
+    return rec or ""
+
+
+def _outline(font):
+    if "CFF2" in font:
+        return "CFF2"
+    if "CFF " in font:
+        return "CFF"
+    return "TrueType"
+
+
+def _is_alt_feature(tag):
+    return tag in ALT_FEATURES or (tag[:2] in ALT_PREFIXES and tag[2:].isdigit())
+
+
+def _features(font):
+    out = OrderedDict()
+    for tbl in ("GSUB", "GPOS"):
+        if tbl not in font:
+            continue
+        t = font[tbl].table
+        if not getattr(t, "FeatureList", None):
+            continue
+        for fr in t.FeatureList.FeatureRecord:
+            tag = fr.FeatureTag
+            if tag in out:
+                continue
+            label = ""
+            params = getattr(fr.Feature, "FeatureParams", None)
+            if params is not None:
+                nid = getattr(params, "UINameID", None) or getattr(params, "FeatUILabelNameID", None)
+                if nid:
+                    label = _name(font, nid)
+            out[tag] = {"tag": tag, "table": tbl, "label": label}
+    return list(out.values())
+
+
+def _alternates(font):
+    """char code -> list of {g, tag, v}: alternates reachable by a feature setting."""
+    if "GSUB" not in font:
+        return {}
+    gsub = font["GSUB"].table
+    if not getattr(gsub, "FeatureList", None) or not getattr(gsub, "LookupList", None):
+        return {}
+    lookups = gsub.LookupList.Lookup
+    cmap = font.getBestCmap() or {}
+    rev = {}
+    for cp, gn in sorted(cmap.items()):
+        rev.setdefault(gn, cp)
+    found = {}
+    seen = set()
+    records = sorted(gsub.FeatureList.FeatureRecord, key=lambda r: r.FeatureTag == "aalt")
+    for fr in records:
+        tag = fr.FeatureTag
+        if not _is_alt_feature(tag):
+            continue
+        for li in fr.Feature.LookupListIndex:
+            if li >= len(lookups):
+                continue
+            lk = lookups[li]
+            for st in lk.SubTable:
+                typ = lk.LookupType
+                if typ == 7:
+                    typ = st.ExtSubTable.LookupType
+                    st = st.ExtSubTable
+                pairs = []
+                if typ == 1:
+                    pairs = [(a, b, 1) for a, b in st.mapping.items()]
+                elif typ == 3:
+                    for a, alts in st.alternates.items():
+                        pairs += [(a, b, i + 1) for i, b in enumerate(alts)]
+                for a, b, v in pairs:
+                    cp = rev.get(a)
+                    if cp is None or a == b or (cp, b, tag) in seen:
+                        continue
+                    seen.add((cp, b, tag))
+                    found.setdefault(cp, []).append({"g": b, "tag": tag, "v": v})
+    return found
+
+
+def inspect(path):
+    font = TTFont(path, lazy=True)
+    info = {}
+    info["flavor"] = font.flavor or ("otf" if font.sfntVersion == "OTTO" else "ttf")
+    info["outline"] = _outline(font)
+    info["names"] = {str(i): _name(font, i) for i in (1, 2, 3, 4, 5, 6, 16, 17, 25)}
+    os2 = font["OS/2"] if "OS/2" in font else None
+    info["weight"] = os2.usWeightClass if os2 else 400
+    italic = bool(os2 and (os2.fsSelection & 1)) or bool(font["head"].macStyle & 2)
+    info["italic"] = italic
+    info["upem"] = font["head"].unitsPerEm
+    info["glyphs"] = len(font.getGlyphOrder())
+    info["vendor"] = (os2.achVendID if os2 else "").strip()
+    axes, instances = [], []
+    if "fvar" in font:
+        fvar = font["fvar"]
+        for a in fvar.axes:
+            axes.append({"tag": a.axisTag, "name": _name(font, a.axisNameID) or a.axisTag,
+                         "min": a.minValue, "def": a.defaultValue, "max": a.maxValue,
+                         "hidden": bool(a.flags & 1)})
+        for inst in fvar.instances:
+            instances.append({"name": _name(font, inst.subfamilyNameID) or "Instance",
+                              "coords": dict(inst.coordinates)})
+    info["axes"] = axes
+    info["instances"] = instances
+    info["features"] = _features(font)
+    info["alternates"] = {str(k): v for k, v in _alternates(font).items()}
+    info["chars"] = sorted((font.getBestCmap() or {}).keys())
+    return json.dumps(info)
+
+
+# ---------- naming ----------
+
+def _ps(s):
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+    return "".join(c for c in s if 33 <= ord(c) <= 126 and c not in "[](){}<>/%")
+
+
+def ps_name(fam, style):
+    return (_ps(fam) + "-" + _ps(style))[:63]
+
+
+def _set(name, nid, s, mac):
+    name.removeNames(nameID=nid)
+    name.setName(s, nid, 3, 1, 0x409)
+    if mac:
+        try:
+            s.encode("mac_roman")
+            name.setName(s, nid, 1, 0, 0)
+        except UnicodeEncodeError:
+            pass
+
+
+def apply_names(font, fam, style, weight, italic):
+    name = font["name"]
+    mac = any(r.platformID == 1 for r in name.names)
+    fam, style = fam.strip(), (style.strip() or "Regular")
+    low = style.lower()
+    bold = low in ("bold", "bold italic")
+    if low in RIBBI:
+        legacy_fam, legacy_sub = fam, RIBBI[low]
+    else:
+        w = " ".join(t for t in style.split() if t.lower() != "italic") or "Regular"
+        legacy_fam, legacy_sub = fam + " " + w, "Italic" if italic else "Regular"
+    ps = ps_name(fam, style)
+    version = _name(font, 5).replace("Version ", "").split(";")[0].strip() or "%.3f" % font["head"].fontRevision
+    vendor = (font["OS/2"].achVendID.strip() if "OS/2" in font else "") or "NONE"
+    _set(name, 1, legacy_fam, mac)
+    _set(name, 2, legacy_sub, mac)
+    if low in RIBBI:
+        name.removeNames(nameID=16)
+        name.removeNames(nameID=17)
+    else:
+        _set(name, 16, fam, mac)
+        _set(name, 17, style, mac)
+    _set(name, 3, "%s;%s;%s" % (version, vendor, ps), mac)
+    _set(name, 4, fam + " " + style, mac)
+    _set(name, 6, ps, mac)
+    if "fvar" in font:
+        _set(name, 25, _ps(fam), mac)
+    if "OS/2" in font:
+        os2 = font["OS/2"]
+        os2.usWeightClass = int(weight)
+        sel = os2.fsSelection & ~(1 | 32 | 64)
+        if italic:
+            sel |= 1
+        if bold:
+            sel |= 32
+        if not italic and not bold:
+            sel |= 64
+        os2.fsSelection = sel
+    head = font["head"]
+    head.macStyle = (head.macStyle & ~3) | (1 if bold else 0) | (2 if italic else 0)
+    if "CFF " in font:
+        cff = font["CFF "].cff
+        cff.fontNames[0] = ps
+        td = cff.topDictIndex[0]
+        td.FullName = fam + " " + style
+        td.FamilyName = fam
+    return ps
+
+
+# ---------- outline conversion ----------
+
+def otf_to_ttf(font):
+    from fontTools.pens.cu2quPen import Cu2QuPen
+    from fontTools.pens.ttGlyphPen import TTGlyphPen
+    order = font.getGlyphOrder()
+    gs = font.getGlyphSet()
+    quad = {}
+    for gn in order:
+        tt = TTGlyphPen(gs)
+        gs[gn].draw(Cu2QuPen(tt, 1.0, reverse_direction=True))
+        quad[gn] = tt.glyph()
+    font["loca"] = newTable("loca")
+    font["glyf"] = glyf = newTable("glyf")
+    glyf.glyphOrder = order
+    glyf.glyphs = quad
+    del font["CFF "]
+    if "VORG" in font:
+        del font["VORG"]
+    glyf.compile(font)
+    hmtx = font["hmtx"]
+    for gn, g in glyf.glyphs.items():
+        if hasattr(g, "xMin"):
+            hmtx[gn] = (hmtx[gn][0], g.xMin)
+    font["maxp"] = maxp = newTable("maxp")
+    maxp.tableVersion = 0x00010000
+    for k in ("maxZones",):
+        setattr(maxp, k, 1)
+    for k in ("maxTwilightPoints", "maxStorage", "maxFunctionDefs", "maxInstructionDefs",
+              "maxStackElements", "maxSizeOfInstructions"):
+        setattr(maxp, k, 0)
+    maxp.maxComponentElements = max([len(getattr(g, "components", []) or []) for g in quad.values()] + [0])
+    maxp.compile(font)
+    post = font["post"]
+    post.formatType = 2.0
+    post.extraNames = []
+    post.mapping = {}
+    post.glyphOrder = order
+    try:
+        post.compile(font)
+    except OverflowError:
+        post.formatType = 3.0
+    font.sfntVersion = "\x00\x01\x00\x00"
+
+
+def ttf_to_otf(font):
+    from fontTools.fontBuilder import FontBuilder
+    from fontTools.pens.t2CharStringPen import T2CharStringPen
+    from fontTools.pens.recordingPen import DecomposingRecordingPen
+    from fontTools.pens.reverseContourPen import ReverseContourPen
+    order = font.getGlyphOrder()
+    gs = font.getGlyphSet()
+    hmtx = font["hmtx"]
+    charstrings = {}
+    for gn in order:
+        rec = DecomposingRecordingPen(gs)
+        gs[gn].draw(rec)
+        pen = T2CharStringPen(hmtx[gn][0], gs)
+        rec.replay(ReverseContourPen(pen))
+        charstrings[gn] = pen.getCharString()
+    fam = _name(font, 16) or _name(font, 1)
+    info = {"FullName": _name(font, 4), "FamilyName": fam, "Weight": _name(font, 17) or _name(font, 2)}
+    upem = font["head"].unitsPerEm
+    if upem != 1000:
+        info["FontMatrix"] = [1.0 / upem, 0, 0, 1.0 / upem, 0, 0]
+    ps = _name(font, 6) or ps_name(fam or "Font", "Regular")
+    fb = FontBuilder(font=font)
+    fb.isTTF = False
+    fb.setupCFF(ps, info, charstrings, {})
+    for t in ("glyf", "loca", "fpgm", "prep", "cvt ", "gasp", "hdmx", "LTSH", "VDMX", "cvar"):
+        if t in font:
+            del font[t]
+    font["maxp"].tableVersion = 0x00005000
+    post = font["post"]
+    post.formatType = 3.0
+    font.sfntVersion = "OTTO"
+
+
+# ---------- export ----------
+
+def export(in_path, out_path, fmt, edits_json):
+    font = TTFont(in_path)
+    warnings = []
+    edits = json.loads(edits_json) if edits_json else None
+    if edits:
+        apply_names(font, edits["family"], edits["style"], edits["weight"], edits["italic"])
+    outline = _outline(font)
+    variable = "fvar" in font
+    ext = fmt
+    if fmt == "ttf" and outline == "CFF":
+        otf_to_ttf(font)
+    elif fmt == "ttf" and outline == "CFF2":
+        ext = "otf"
+        warnings.append("Variable CFF2 outlines can't become TrueType here, so it was saved as OTF.")
+    elif fmt == "otf" and outline == "TrueType":
+        if variable:
+            ext = "ttf"
+            warnings.append("Variable TrueType outlines can't become CFF2 here, so it was saved as TTF.")
+        else:
+            ttf_to_otf(font)
+    if "DSIG" in font:
+        del font["DSIG"]
+    font.flavor = fmt if fmt in ("woff", "woff2") else None
+    font.save(out_path)
+    return json.dumps({"ext": ext, "warnings": warnings})
+
+
+def make_zip(entries_json, out_path):
+    with zipfile.ZipFile(out_path, "w", zipfile.ZIP_DEFLATED) as z:
+        for e in json.loads(entries_json):
+            z.write(e["path"], e["name"])
+    return out_path
+
+
+def make_instance(in_path, out_path, loc_json, fam, style, italic):
+    """Pin every axis of a variable font and save a static font with its own names."""
+    from fontTools.varLib.instancer import instantiateVariableFont
+    font = TTFont(in_path)
+    axes = {a.axisTag: a for a in font["fvar"].axes}
+    loc = {}
+    for t, a in axes.items():
+        v = json.loads(loc_json).get(t, a.defaultValue)
+        loc[t] = max(a.minValue, min(a.maxValue, float(v)))
+    weight = int(round(loc.get("wght", font["OS/2"].usWeightClass if "OS/2" in font else 400)))
+    font = instantiateVariableFont(font, loc, inplace=False)
+    if "name" in font:
+        font["name"].removeNames(nameID=25)
+    apply_names(font, fam, style, max(1, min(1000, weight)), bool(italic))
+    font.flavor = None
+    font.save(out_path)
+    return json.dumps({"weight": weight})
+</script>
+<script>
+(() => {
+"use strict";
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+const FORMATS = ["ttf", "otf", "woff", "woff2"];
+const MIME = {ttf:"font/ttf", otf:"font/otf", woff:"font/woff", woff2:"font/woff2", zip:"application/zip"};
+const WEIGHTS = {100:"Thin",200:"ExtraLight",300:"Light",400:"Regular",500:"Medium",600:"SemiBold",700:"Bold",800:"ExtraBold",900:"Black"};
+const PRESETS = {
+  "Sentence": "Sphinx of black quartz, judge my vow.",
+  "Alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZ\nabcdefghijklmnopqrstuvwxyz\n0123456789 !?&@#%(){}[]",
+  "Czech": "Příliš žluťoučký kůň úpěl ďábelské ódy.\nPŘÍLIŠ ŽLUŤOUČKÝ KŮŇ ÚPĚL ĎÁBELSKÉ ÓDY.",
+  "Numbers": "0123456789\n1/2 3/4 €1,234.56 (+42) 10:30",
+  "Paragraph": "Good typography is invisible until it is missing. A typeface earns trust in the small moments: the rhythm of a paragraph, the way numerals sit in a table, how an italic leans without shouting. Test it at the size it will actually be used, then test it again much smaller."
+};
+const DEFAULT_ON = new Set(["liga", "clig", "calt", "kern"]);
+const FEATURE_NAMES = {
+  liga:"Standard ligatures", dlig:"Discretionary ligatures", hlig:"Historical ligatures", clig:"Contextual ligatures",
+  calt:"Contextual alternates", kern:"Kerning", salt:"Stylistic alternates", swsh:"Swashes", cswh:"Contextual swashes",
+  titl:"Titling", smcp:"Small caps", c2sc:"Caps to small caps", pcap:"Petite caps", c2pc:"Caps to petite caps",
+  unic:"Unicase", case:"Case-sensitive forms", cpsp:"Capital spacing", onum:"Oldstyle figures", lnum:"Lining figures",
+  tnum:"Tabular figures", pnum:"Proportional figures", zero:"Slashed zero", frac:"Fractions", afrc:"Alternative fractions",
+  sups:"Superscript", subs:"Subscript", sinf:"Scientific inferiors", ordn:"Ordinals", numr:"Numerators", dnom:"Denominators",
+  hist:"Historical forms", ornm:"Ornaments", nalt:"Alternate annotation", rand:"Randomize", jalt:"Justification alternates"
+};
+const SAMPLES = {
+  liga:"fi ffl", dlig:"st ct", hlig:"st ct", clig:"fi ffl", calt:"->", kern:"AVTo", case:"(H)", cpsp:"HAM",
+  onum:"1234", lnum:"1234", tnum:"1110", pnum:"1110", zero:"0", frac:"1/2", afrc:"1/2", sups:"x2", subs:"H2O",
+  sinf:"H2O", ordn:"1a No", numr:"123", dnom:"123", smcp:"Caps", c2sc:"CAPS", pcap:"Caps", c2pc:"CAPS",
+  unic:"Aa", titl:"TITL", swsh:"Qu", hist:"s", ornm:"abc", jalt:"abc", rand:"aaa", nalt:"123"
+};
+const STYLISTIC = t => /^(ss\d\d|cv\d\d)$/.test(t) || ["salt","swsh","titl","hist","nalt","cswh"].includes(t);
+const uniqAlts = list => { const seen = new Set(); return (list || []).filter(a => !seen.has(a.g) && seen.add(a.g)); };
+const hasStylistic = (it, c) => (it.info.alternates[c] || []).some(a => STYLISTIC(a.tag));
+function pickSample(chars) {
+  const u = [...new Set(chars)].filter(c => c.trim()).sort((a, b) => a.codePointAt(0) - b.codePointAt(0));
+  const basic = u.filter(c => /[A-Za-z0-9]/.test(c));
+  return (basic.length ? basic : u).slice(0, 4).join("");
+}
+const TOGGLABLE = t => /^(ss\d\d|cv\d\d)$/.test(t) || t in FEATURE_NAMES;
+const ICON_DL = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 2v9M4 7.5 8 11.5l4-4M2.5 14h11"/></svg>';
+const ICON_X = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m3.5 3.5 9 9m0-9-9 9"/></svg>';
+
+const state = {
+  items: [], active: null, formats: new Set(["woff2"]), naming: "ps", preset: "Sentence",
+  size: 96, lead: 1.1, track: 0, align: "left", glyphFilter: "all", glyphQuery: "", glyph: null
+};
+let py = null, pyReady = false, pending = [], savedRange = null, busy = false;
+
+/* ---------- engine ---------- */
+async function boot() {
+  const el = $("#engine");
+  try {
+    py = await loadPyodide();
+    el.textContent = "Loading fontTools…";
+    await py.loadPackage(["fonttools", "brotli"]);
+    py.runPython($("#engine-py").textContent);
+    py.FS.mkdirTree("/in"); py.FS.mkdirTree("/out");
+    pyReady = true;
+    el.textContent = ""; el.classList.add("hidden");
+    const q = pending; pending = [];
+    for (const it of q) await inspectItem(it);
+    renderAll();
+  } catch (e) {
+    console.error(e);
+    el.textContent = "Engine failed to load";
+    el.classList.add("err");
+    toast("The conversion engine couldn't load. Check your internet connection and reload the page. Previews still work.", true);
+  }
+}
+const pyFn = n => py.globals.get(n);
+
+/* ---------- import ---------- */
+async function addFiles(fileList) {
+  const files = [...fileList];
+  for (const f of files) {
+    if (!/\.(ttf|otf|woff2?|ttc|otc)$/i.test(f.name)) { toast(`${f.name} isn't a font file. Use TTF, OTF, WOFF or WOFF2.`, true); continue; }
+    const id = "f" + Math.random().toString(36).slice(2, 9);
+    const it = { id, fileName: f.name, status: "loading", css: "ff_" + id, selected: true, axis: {}, feat: {}, previewOk: true };
+    state.items.push(it);
+    if (!state.active) state.active = id;
+    it.bytes = new Uint8Array(await f.arrayBuffer());
+    if (/\.(ttc|otc)$/i.test(f.name)) { it.status = "error"; it.error = "Font collections (.ttc) aren't supported. Export the styles as separate files first."; continue; }
+    try {
+      const face = new FontFace(it.css, it.bytes.slice().buffer);
+      await face.load(); document.fonts.add(face);
+    } catch { it.previewOk = false; }
+    if (pyReady) await inspectItem(it); else pending.push(it);
+  }
+  renderAll();
+}
+
+async function inspectItem(it) {
+  try {
+    py.FS.writeFile("/in/" + it.id, it.bytes);
+    const info = JSON.parse(pyFn("inspect")("/in/" + it.id));
+    it.info = info;
+    const n = info.names;
+    it.orig = { family: n["16"] || n["1"] || stem(it.fileName), style: n["17"] || n["2"] || "Regular", weight: info.weight, italic: info.italic };
+    it.edits = { ...it.orig };
+    info.axes.forEach(a => it.axis[a.tag] = a.def);
+    info.features.forEach(f => it.feat[f.tag] = DEFAULT_ON.has(f.tag) ? 1 : 0);
+    it.status = "ready";
+  } catch (e) {
+    console.error(e);
+    it.status = "error";
+    it.error = "This file couldn't be read as a font. It may be damaged or use an unsupported format.";
+  }
+}
+
+/* ---------- naming helpers ---------- */
+const stem = f => f.replace(/\.[^.]+$/, "");
+const psSan = s => s.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").split("").filter(c => { const k = c.charCodeAt(0); return k >= 33 && k <= 126 && !"[](){}<>/%".includes(c); }).join("");
+const edited = it => it.edits && (["family", "style", "weight", "italic"].some(k => it.edits[k] !== it.orig[k]));
+function effective(it) {
+  if (!it.info) return { ps: "", full: "" };
+  if (!edited(it)) return { ps: it.info.names["6"] || psSan(it.orig.family + "-" + it.orig.style), full: it.info.names["4"] || it.orig.family + " " + it.orig.style };
+  const fam = it.edits.family.trim(), sty = it.edits.style.trim() || "Regular";
+  return { ps: (psSan(fam) + "-" + psSan(sty)).slice(0, 63), full: fam + " " + sty };
+}
+function weightStyle(w, italic, variable) {
+  if (variable) return italic ? "Variable Italic" : "Variable";
+  const k = Math.min(900, Math.max(100, Math.round(w / 100) * 100));
+  const base = WEIGHTS[k];
+  if (!italic) return base;
+  return base === "Regular" ? "Italic" : base + " Italic";
+}
+function clashes() {
+  const ready = state.items.filter(i => i.status === "ready" && i.selected);
+  const map = new Map();
+  ready.forEach(i => {
+    const e = effective(i);
+    [ "ps:" + e.ps.toLowerCase(), "full:" + e.full.toLowerCase() ].forEach(k => { if (!map.has(k)) map.set(k, new Set()); map.get(k).add(i.id); });
+  });
+  const out = new Map();
+  map.forEach(set => { if (set.size > 1) set.forEach(id => { if (!out.has(id)) out.set(id, new Set()); set.forEach(o => o !== id && out.get(id).add(o)); }); });
+  return out;
+}
+function fixClashes() {
+  const keysOf = (it, style) => {
+    const fam = it.edits.family.trim();
+    const e = style == null ? effective(it) : { ps: (psSan(fam) + "-" + psSan(style)).slice(0, 63), full: fam + " " + style };
+    return ["ps:" + e.ps.toLowerCase(), "full:" + e.full.toLowerCase()];
+  };
+  const used = new Set(); let changed = 0;
+  state.items.filter(i => i.status === "ready" && i.selected).forEach(it => {
+    if (!keysOf(it).some(k => used.has(k))) { keysOf(it).forEach(k => used.add(k)); return; }
+    const base = weightStyle(it.edits.weight, it.edits.italic, it.info.axes.length > 0);
+    const parts = stem(it.fileName).split(/[-_ ]+/);
+    const token = parts.length > 1 ? parts.pop().replace(/^./, m => m.toUpperCase()) : null;
+    const candidates = [base, token, token && it.edits.italic && !/italic/i.test(token) ? token + " Italic" : null].filter(Boolean);
+    for (let n = 2; n < 50; n++) candidates.push(`${base} ${n}`);
+    const style = candidates.find(c => !keysOf(it, c).some(k => used.has(k)));
+    it.edits.style = style; changed++;
+    keysOf(it).forEach(k => used.add(k));
+  });
+  renderList(); renderNames(); renderTester();
+  toast(`Renamed ${changed} font${changed > 1 ? "s" : ""}. Check the new style names before exporting.`);
+}
+
+/* ---------- export ---------- */
+async function exportItems(items) {
+  if (busy) return;
+  if (!pyReady) { toast("The engine is still loading. Try again in a moment.", true); return; }
+  items = items.filter(i => i.status === "ready");
+  if (!items.length) { toast("Select at least one font to download.", true); return; }
+  if (!state.formats.size) { toast("Choose at least one export format.", true); return; }
+  busy = true; const btn = $("#dlBtn"); const label = btn.textContent;
+  const outs = [], warns = new Set(), taken = new Set(), done = new Set();
+  try {
+    let k = 0; const total = items.length * state.formats.size;
+    for (const it of items) for (const fmt of FORMATS) {
+      if (!state.formats.has(fmt)) continue;
+      btn.textContent = `Converting ${++k}/${total}`;
+      await new Promise(r => setTimeout(r, 20));
+      const out = `/out/${it.id}.${fmt}`;
+      let r;
+      try { r = JSON.parse(pyFn("export")("/in/" + it.id, out, fmt, edited(it) ? JSON.stringify(it.edits) : "")); }
+      catch (e) { console.error(e); warns.add(`${it.fileName} couldn't be converted to ${fmt.toUpperCase()}.`); continue; }
+      r.warnings.forEach(w => warns.add(`${it.fileName}: ${w}`));
+      if (done.has(it.id + r.ext)) continue;
+      done.add(it.id + r.ext);
+      let base = state.naming === "ps" ? effective(it).ps : stem(it.fileName);
+      let name = `${base}.${r.ext}`, n = 2;
+      while (taken.has(name.toLowerCase())) name = `${base}-${n++}.${r.ext}`;
+      taken.add(name.toLowerCase());
+      outs.push({ path: out, name, ext: r.ext });
+    }
+    if (outs.length === 1) {
+      save(py.FS.readFile(outs[0].path), outs[0].name, MIME[outs[0].ext]);
+    } else if (outs.length > 1) {
+      pyFn("make_zip")(JSON.stringify(outs), "/out/fonts.zip");
+      const fam = items.length === 1 ? psSan(items[0].edits.family) : "fonts";
+      save(py.FS.readFile("/out/fonts.zip"), `${fam || "fonts"}.zip`, MIME.zip);
+      py.FS.unlink("/out/fonts.zip");
+    }
+    outs.forEach(o => { try { py.FS.unlink(o.path); } catch {} });
+    if (outs.length) toast(`Downloaded ${outs.length} file${outs.length > 1 ? "s" : ""}.`);
+    warns.forEach(w => toast(w, true));
+  } finally { busy = false; btn.textContent = label; }
+}
+function save(u8, name, type) {
+  const url = URL.createObjectURL(new Blob([u8], { type }));
+  const a = document.createElement("a"); a.href = url; a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 4000);
+}
+
+/* ---------- css strings ---------- */
+const byId = id => state.items.find(i => i.id === id);
+const active = () => byId(state.active);
+const varCSS = it => Object.entries(it.axis).map(([t, v]) => `"${t}" ${v}`).join(", ") || "normal";
+const featCSS = it => Object.entries(it.feat).map(([t, v]) => `"${t}" ${v}`).join(", ") || "normal";
+const fontStyle = (it, extra) => `font-family:'${it.css}',var(--ui);font-variation-settings:${varCSS(it)};font-feature-settings:${extra ? (Object.keys(it.feat).length ? featCSS(it) + ", " : "") + extra : featCSS(it)}`;
+
+/* ---------- rendering ---------- */
+function renderAll() {
+  const has = state.items.length > 0;
+  $("#hero").classList.toggle("hidden", has);
+  $("#app").classList.toggle("hidden", !has);
+  document.querySelectorAll(".has-fonts").forEach(el => el.classList.toggle("hidden", !has));
+  renderList(); renderTester(); renderTiles(); renderGlyphs(); renderNames();
+}
+
+function renderList() {
+  const c = clashes();
+  const ready = state.items.filter(i => i.status === "ready");
+  $("#fontCount").textContent = `${state.items.length} file${state.items.length === 1 ? "" : "s"}, ${state.items.filter(i => i.selected && i.status === "ready").length} selected for download`;
+  $("#list").innerHTML = state.items.map(it => {
+    const e = effective(it), cl = c.get(it.id);
+    const tags = [];
+    if (it.info) {
+      tags.push(it.info.flavor.toUpperCase(), it.info.outline);
+      if (it.info.axes.length) tags.push(`Variable, ${it.info.axes.map(a => a.tag).join(" ")}`);
+      tags.push(`${it.info.glyphs} glyphs`);
+    }
+    const t = tags.map(x => `<span class="tag">${esc(x)}</span>`).join("")
+      + (it.id === state.active ? `<span class="tag" style="background:var(--ink);color:var(--bg)">In the tester</span>` : "")
+      + (it.instanceOf && byId(it.instanceOf) ? `<span class="tag">Static from ${esc(byId(it.instanceOf).fileName)}</span>` : "")
+      + (edited(it) ? `<span class="tag edit">Renamed</span>` : "")
+      + (cl ? `<span class="tag warn">Same name as ${esc([...cl].map(id => byId(id).fileName).join(", "))}</span>` : "")
+      + (it.status === "error" ? `<span class="tag warn">${esc(it.error)}</span>` : "")
+      + (it.status === "loading" ? `<span class="tag">Reading…</span>` : "");
+    const title = it.info ? `${it.edits.family} ${it.edits.style}` : it.fileName;
+    const sampleStyle = it.previewOk && it.status !== "error" ? `font-family:'${it.css}',var(--ui)` : "";
+    return `<div class="row${it.id === state.active ? " active" : ""}" data-id="${it.id}" role="button" tabindex="0" aria-label="Test ${esc(title)}">
+      <button class="check" role="checkbox" aria-checked="${it.selected && it.status === "ready"}" aria-label="Select ${esc(it.fileName)} for download" data-check ${it.status !== "ready" ? "disabled" : ""}></button>
+      <div style="min-width:0"><div class="sample" style="${esc(sampleStyle)}">${esc(title)}</div>
+        <div class="meta"><span class="tag" style="background:none;padding-left:0">${esc(it.fileName)}${it.info ? ` → ${esc(e.ps)}` : ""}</span>${t}</div></div>
+      <div class="row-act">
+        <button class="icon" data-dl title="Download this font" aria-label="Download ${esc(it.fileName)}" ${it.status !== "ready" ? "disabled" : ""}>${ICON_DL}</button>
+        <button class="icon" data-rm title="Remove" aria-label="Remove ${esc(it.fileName)}">${ICON_X}</button>
+      </div></div>`;
+  }).join("");
+  const box = $("#clash");
+  if (c.size) {
+    box.classList.remove("hidden");
+    box.innerHTML = `<span><span class="dot"></span><b>${c.size} selected fonts share an internal name</b> and would replace each other when installed.</span><button class="btn sm solid" id="fixBtn">Make names unique</button>`;
+  } else box.classList.add("hidden");
+  const sel = ready.filter(i => i.selected).length;
+  const dl = $("#dlBtn");
+  const nFiles = sel * state.formats.size;
+  if (!busy) dl.textContent = nFiles > 1 ? `Download ${nFiles} files` : "Download";
+  dl.disabled = !sel || !state.formats.size;
+  $("#selAll").textContent = ready.length && ready.every(i => i.selected) ? "Select none" : "Select all";
+}
+
+function renderSeg(el, opts, isOn, onClick) {
+  el.innerHTML = opts.map(([v, l]) => `<button data-v="${esc(v)}" aria-pressed="${isOn(v)}">${esc(l)}</button>`).join("");
+  el.onclick = e => { const b = e.target.closest("button"); if (b) onClick(b.dataset.v); };
+}
+
+function renderControls() {
+  renderSeg($("#formats"), FORMATS.map(f => [f, f.toUpperCase()]), v => state.formats.has(v), v => {
+    state.formats.has(v) ? state.formats.delete(v) : state.formats.add(v); renderControls(); renderList();
+  });
+  renderSeg($("#naming"), [["ps", "PostScript name"], ["original", "Original"]], v => state.naming === v, v => { state.naming = v; renderControls(); });
+  renderSeg($("#align"), [["left", "Left"], ["center", "Center"], ["right", "Right"]], v => state.align === v, v => { state.align = v; renderControls(); styleTester(); });
+  renderSeg($("#presets"), Object.keys(PRESETS).map(k => [k, k]), v => state.preset === v, v => { $("#tester").textContent = PRESETS[v]; savedRange = null; state.preset = v; renderControls(); });
+  renderSeg($("#glyphFilter"), [["all", "All"], ["alt", "With stylistic alternates"]], v => state.glyphFilter === v, v => { state.glyphFilter = v; renderControls(); renderGlyphs(); });
+  $("#size").value = state.size; $("#lead").value = state.lead; $("#track").value = state.track;
+  $("#sizeV").textContent = state.size + " px"; $("#leadV").textContent = (+state.lead).toFixed(2); $("#trackV").textContent = (+state.track).toFixed(3) + " em";
+}
+
+function styleTester() {
+  const it = active(), t = $("#tester");
+  if (!it) return;
+  t.style.cssText = fontStyle(it) + `;font-size:${state.size}px;line-height:${state.lead};letter-spacing:${state.track}em;text-align:${state.align}`;
+  t.querySelectorAll("[data-feat]").forEach(s => s.style.fontFeatureSettings = (Object.keys(it.feat).length ? featCSS(it) + ", " : "") + s.dataset.feat);
+  document.querySelectorAll("[data-var]").forEach(el => el.style.fontVariationSettings = varCSS(it));
+  $("#sizeV").textContent = state.size + " px"; $("#leadV").textContent = (+state.lead).toFixed(2); $("#trackV").textContent = (+state.track).toFixed(3) + " em";
+}
+
+function renderTester() {
+  const it = active();
+  if (!it) return;
+  setTitles(it);
+  renderPicker();
+  $("#testerSub").textContent = it.info ? `${it.info.features.length} OpenType features, ${it.info.chars.length} characters${it.info.axes.length ? `, ${it.info.axes.length} axes` : ""}` : (it.error || "Reading font…");
+  $("#previewErr").classList.toggle("hidden", it.previewOk);
+  const t = $("#tester");
+  if (!t.textContent.trim() && !t.querySelector(".alt")) t.textContent = PRESETS.Sentence;
+  // alternates inserted for another font don't map to this one; turn them back into plain text
+  t.querySelectorAll(".alt").forEach(s => { if (s.dataset.font !== it.id) s.replaceWith(document.createTextNode(s.textContent)); });
+  const box = $("#axesBox");
+  if (it.info && it.info.axes.length) {
+    box.innerHTML = `<p class="group-title">Variable axes</p>` + it.info.axes.map(a => `
+      <div class="ctl" style="margin-bottom:18px"><label for="ax_${esc(a.tag)}"><span>${esc(a.name)} <span class="mute">${esc(a.tag)}</span></span><span id="axv_${esc(a.tag)}">${+(+it.axis[a.tag]).toFixed(2)}</span></label>
+      <input type="range" id="ax_${esc(a.tag)}" data-axis="${esc(a.tag)}" min="${a.min}" max="${a.max}" step="${a.max - a.min > 20 ? 1 : 0.1}" value="${it.axis[a.tag]}"></div>`).join("")
+      + `<div style="margin-top:14px"><button class="btn sm" id="axReset">Reset axes</button></div>`;
+  } else box.innerHTML = "";
+  styleTester();
+}
+
+function renderTiles() {
+  const it = active(), el = $("#tiles");
+  if (!it || !it.info) { el.innerHTML = ""; $("#featSub").textContent = ""; return; }
+  const alts = it.info.alternates;
+  const byTag = {};
+  Object.entries(alts).forEach(([cp, list]) => list.forEach(a => { (byTag[a.tag] ||= []).push(String.fromCodePoint(+cp)); }));
+  const feats = it.info.features.filter(f => TOGGLABLE(f.tag));
+  $("#featSub").textContent = feats.length ? `${feats.length} features. Click a tile to switch it on or off in the tester.` : "This font has no user-selectable features.";
+  el.innerHTML = feats.map(f => {
+    let sample = byTag[f.tag] ? pickSample(byTag[f.tag]) : (SAMPLES[f.tag] || "Abc 123");
+    if (!sample) sample = SAMPLES[f.tag] || "Abc 123";
+    if (/^(tnum|pnum|lnum|onum)$/.test(f.tag) && !sample.match(/\d/)) sample = SAMPLES[f.tag];
+    const label = f.label || FEATURE_NAMES[f.tag] || (f.tag.startsWith("ss") ? `Stylistic set ${+f.tag.slice(2)}` : f.tag.startsWith("cv") ? `Character variant ${+f.tag.slice(2)}` : f.tag);
+    const on = it.feat[f.tag] ? "true" : "false";
+    return `<button class="tile" data-feat-tag="${esc(f.tag)}" aria-pressed="${on}"><span class="tile-top"><span>${esc(label)}</span><span>${esc(f.tag)}</span></span>
+      <span class="demo"><span data-var style="${esc(fontStyle(it, `"${f.tag}" 0`))}">${esc(sample)}</span><span class="arr">→</span><span data-var style="${esc(fontStyle(it, `"${f.tag}" 1`))}">${esc(sample)}</span></span></button>`;
+  }).join("");
+}
+
+function glyphList(it) {
+  let chars = it.info.chars.filter(c => c > 32 && !(c >= 0x7f && c <= 0x9f));
+  if (state.glyphFilter === "alt") chars = chars.filter(c => hasStylistic(it, c));
+  const q = state.glyphQuery.trim();
+  if (q) {
+    const hex = q.replace(/^u\+?/i, "");
+    const set = new Set([...q].map(c => c.codePointAt(0)));
+    if (/^[0-9a-f]{2,6}$/i.test(hex)) set.add(parseInt(hex, 16));
+    chars = chars.filter(c => set.has(c));
+  }
+  return chars;
+}
+function renderGlyphs() {
+  const it = active(), grid = $("#grid");
+  if (!it || !it.info) { grid.innerHTML = ""; $("#glyphCard").innerHTML = `<p class="empty-note">${it && it.status === "error" ? esc(it.error) : "Reading font…"}</p>`; return; }
+  const chars = glyphList(it), LIMIT = 3000;
+  const style = fontStyle(it);
+  grid.style.cssText = style;
+  grid.setAttribute("data-var", "");
+  grid.innerHTML = chars.slice(0, LIMIT).map(c => {
+    const has = hasStylistic(it, c);
+    return `<button class="cell${has ? " has" : ""}${state.glyph === c ? " sel" : ""}" data-cp="${c}" title="U+${c.toString(16).toUpperCase().padStart(4, "0")}">${esc(String.fromCodePoint(c))}</button>`;
+  }).join("");
+  $("#gridNote").textContent = chars.length > LIMIT ? `Showing ${LIMIT} of ${chars.length} characters. Use the search to find the rest.` : chars.length ? "" : "No characters match.";
+  renderGlyphCard();
+}
+function renderGlyphCard() {
+  const it = active(), card = $("#glyphCard");
+  if (!it || !it.info) return;
+  const c = state.glyph;
+  if (c == null || !it.info.chars.includes(c)) { card.innerHTML = `<p class="empty-note">Select a character to inspect it. Characters marked with a dot have stylistic alternates.</p>`; return; }
+  const ch = String.fromCodePoint(c), alts = uniqAlts(it.info.alternates[c]);
+  card.innerHTML = `<div class="big" data-var style="${esc(fontStyle(it))}">${esc(ch)}</div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><span>U+${c.toString(16).toUpperCase().padStart(4, "0")}</span><button class="btn sm solid" data-ins-base>Add to tester</button></div>
+    <p class="group-title" style="margin-top:18px">${alts.length ? `${alts.length} alternate${alts.length > 1 ? "s" : ""}` : "No alternates"}</p>
+    <div class="alts">${alts.map((a, i) => `<button class="alt-btn" data-alt="${i}" title="${esc(a.g)}"><span class="g" data-var style="${esc(fontStyle(it, `"${a.tag}" ${a.v}`))}">${esc(ch)}</span><small>${esc(a.tag)}${a.v > 1 ? " " + a.v : ""}</small></button>`).join("")}</div>`;
+}
+
+function renderNames() {
+  const it = active(), form = $("#nameForm"), info = $("#nameInfo");
+  if (!it || !it.info) { form.innerHTML = `<p class="empty-note">${it && it.status === "error" ? esc(it.error) : "Reading font…"}</p>`; info.innerHTML = ""; return; }
+  const e = it.edits;
+  form.innerHTML = `
+    <label class="field"><span>Family</span><input data-name="family" value="${esc(e.family)}" autocomplete="off"></label>
+    <label class="field"><span>Style</span><input data-name="style" value="${esc(e.style)}" autocomplete="off"></label>
+    <div class="two">
+      <label class="field"><span>Weight class <span id="wName">${esc(WEIGHTS[Math.round(e.weight / 100) * 100] || "")}</span></span><input data-name="weight" type="number" min="1" max="1000" step="1" value="${e.weight}"></label>
+      <div class="field"><span>Slope</span><div class="seg" id="italicSeg" style="padding-top:8px"></div></div>
+    </div>
+    <div class="name-acts">
+      <button class="btn sm" id="autoStyle">Style from weight</button>
+      <button class="btn sm" id="applyFam">Use this family for all selected</button>
+      <button class="btn sm" id="resetNames" ${edited(it) ? "" : "disabled"}>Reset names</button>
+    </div>`;
+  const italicSeg = () => renderSeg($("#italicSeg"), [["0", "Upright"], ["1", "Italic"]], v => (v === "1") === e.italic, v => { e.italic = v === "1"; italicSeg(); nameChanged(); });
+  italicSeg();
+  renderNameInfo();
+}
+function renderNameInfo() {
+  const it = active(); if (!it || !it.info) return;
+  const n = it.info.names, e = effective(it), ed = edited(it);
+  const row = (k, now, was) => `<dt>${k}</dt><dd>${esc(now) || '<span class="mute">None</span>'}${ed && was !== undefined && was !== now ? `<s>${esc(was)}</s>` : ""}</dd>`;
+  const low = it.edits.style.trim().toLowerCase(), ribbi = ["regular", "italic", "bold", "bold italic"].includes(low);
+  const legacyFam = ed ? (ribbi ? it.edits.family : `${it.edits.family} ${it.edits.style.split(/\s+/).filter(w => w.toLowerCase() !== "italic").join(" ") || "Regular"}`) : n["1"];
+  const legacySub = ed ? (ribbi ? it.edits.style.replace(/\b\w/g, m => m.toUpperCase()) : it.edits.italic ? "Italic" : "Regular") : n["2"];
+  const blk = (k, now, was, wide) => `<div${wide ? ' class="wide"' : ""}><h4>${k}</h4><p>${esc(now) || '<span class="mute">None</span>'}${ed && was !== undefined && (was || "") !== (now || "") ? `<s>was ${esc(was || "none")}</s>` : ""}</p></div>`;
+  $("#nameInfo").innerHTML = `<div class="info">
+    ${blk("Full name (ID 4)", e.full, n["4"], true)}
+    ${blk("PostScript name (ID 6)", e.ps, n["6"], true)}
+    ${blk("Family (ID 1)", legacyFam, n["1"])}
+    ${blk("Subfamily (ID 2)", legacySub, n["2"])}
+    ${blk("Typographic family (ID 16)", ed ? (ribbi ? "" : it.edits.family) : n["16"], n["16"])}
+    ${blk("Typographic style (ID 17)", ed ? (ribbi ? "" : it.edits.style) : n["17"], n["17"])}
+    <div><h4>Outlines</h4><p>${esc(it.info.outline)}</p></div>
+    <div><h4>Glyphs</h4><p>${it.info.glyphs}, ${it.info.upem} units per em</p></div>
+    <div><h4>Source format</h4><p>${esc(it.info.flavor.toUpperCase())}</p></div>
+    <div><h4>Weight class</h4><p>${it.edits.weight}</p></div>
+    ${it.info.axes.length ? `<div class="wide"><h4>Axes</h4><p>${it.info.axes.map(a => `${esc(a.name)} ${a.min}–${a.max}`).join("<br>")}</p></div>` : ""}
+    <div class="wide"><h4>Version</h4><p>${esc(n["5"])}</p></div>
+  </div>`;
+}
+function nameChanged() {
+  const it = active();
+  $("#wName") && ($("#wName").textContent = WEIGHTS[Math.round(it.edits.weight / 100) * 100] || "");
+  $("#resetNames") && ($("#resetNames").disabled = !edited(it));
+  setTitles(it);
+  renderPicker();
+  renderNameInfo(); renderList();
+}
+
+function setTitles(it) {
+  const fam = it.info ? it.edits.family.trim() || "Font" : stem(it.fileName);
+  const pos = /s$/i.test(fam) ? fam + "’" : fam + "’s";
+  $("#barName").textContent = it.info ? `${fam} ${it.edits.style}` : it.fileName;
+  $("#featTitle").textContent = `${pos} Features`;
+  $("#glyphTitle").textContent = `${pos} Glyphs`;
+}
+
+const instOn = (it, n) => Object.entries(n.coords).every(([t, v]) => +it.axis[t] === +v);
+function pickerOptions(it) {
+  const opts = [];
+  if (!it.info) return opts;
+  it.info.instances.forEach((n, i) => opts.push({ group: "Instances", label: n.name, kind: "inst", i, sel: instOn(it, n) }));
+  const fam = it.edits.family.trim().toLowerCase();
+  const sib = state.items.filter(x => x.status === "ready" && x.edits.family.trim().toLowerCase() === fam);
+  if (sib.length > 1) sib.forEach(x => opts.push({ group: "Loaded styles", label: x.edits.style + (x.info.axes.length ? " (variable)" : ""), kind: "file", id: x.id, sel: x.id === it.id }));
+  return opts;
+}
+function renderPicker() {
+  const it = active(); if (!it) return;
+  $("#famPill").textContent = it.info ? it.edits.family : stem(it.fileName);
+  const opts = pickerOptions(it);
+  const inst = it.info ? it.info.instances.find(n => instOn(it, n)) : null;
+  $("#ddLabel").textContent = inst ? inst.name : it.info && it.info.instances.length ? "Custom" : it.info ? it.edits.style : "";
+  const btn = $("#styleDD .dd-btn");
+  btn.disabled = opts.length < 2;
+  const groups = [...new Set(opts.map(o => o.group))];
+  $("#ddMenu").innerHTML = groups.map(g => (groups.length > 1 ? `<div class="dd-group">${g}</div>` : "") +
+    opts.map((o, k) => o.group !== g ? "" : `<button role="option" data-k="${k}" aria-selected="${o.sel}">${esc(o.label)}</button>`).join("")).join("");
+  if (btn.disabled) closePicker();
+  document.querySelectorAll(".has-var").forEach(el => el.classList.toggle("hidden", !(it.info && it.info.axes.length)));
+  const ia = $("#instAll"); if (ia) ia.classList.toggle("hidden", !(it.info && it.info.instances.length));
+}
+function closePicker() { $("#ddMenu").classList.add("hidden"); $("#styleDD .dd-btn").setAttribute("aria-expanded", "false"); }
+
+/* ---------- static instances of a variable font ---------- */
+async function addInstances(src, list) {
+  if (!pyReady) { toast("The engine is still loading. Try again in a moment.", true); return 0; }
+  let added = 0;
+  const italicSrc = src.edits.italic || (src.axis.ital || 0) >= 1 || (src.axis.slnt || 0) !== 0;
+  let at = state.items.indexOf(src) + 1;
+  while (state.items[at] && state.items[at].instanceOf === src.id) at++;
+  for (const { name, coords } of list) {
+    const style = name.trim() || "Regular";
+    if (state.items.some(i => i.instanceOf === src.id && i.edits && i.edits.style === style)) continue;
+    const id = "f" + Math.random().toString(36).slice(2, 9);
+    try {
+      await new Promise(r => setTimeout(r, 10));
+      pyFn("make_instance")("/in/" + src.id, "/in/" + id, JSON.stringify(coords), src.edits.family, style, italicSrc);
+    } catch (e) { console.error(e); toast(`Couldn't make a static ${style}.`, true); continue; }
+    const bytes = py.FS.readFile("/in/" + id);
+    const it = { id, fileName: (psSan(src.edits.family) + "-" + psSan(style)) + ".ttf", status: "loading", css: "ff_" + id,
+                 selected: true, axis: {}, feat: {}, previewOk: true, bytes, instanceOf: src.id };
+    try { const face = new FontFace(it.css, bytes.slice().buffer); await face.load(); document.fonts.add(face); } catch { it.previewOk = false; }
+    await inspectItem(it);
+    state.items.splice(at++, 0, it); added++;
+  }
+  return added;
+}
+
+/* ---------- toast ---------- */
+function toast(msg, err) {
+  const t = document.createElement("div");
+  t.className = "toast" + (err ? " err" : ""); t.textContent = msg;
+  $("#toasts").appendChild(t);
+  setTimeout(() => t.remove(), err ? 7000 : 3500);
+}
+
+/* ---------- tester insertion ---------- */
+function insertIntoTester(node) {
+  const t = $("#tester");
+  let r = savedRange && t.contains(savedRange.startContainer) ? savedRange : null;
+  if (!r) { r = document.createRange(); r.selectNodeContents(t); r.collapse(false); }
+  r.deleteContents(); r.insertNode(node); r.setStartAfter(node); r.collapse(true);
+  savedRange = r.cloneRange();
+  styleTester();
+}
+
+/* ---------- events ---------- */
+function bind() {
+  document.addEventListener("click", e => {
+    if (e.target.closest("[data-pick]")) $("#file").click();
+  });
+  $("#file").onchange = e => { addFiles(e.target.files); e.target.value = ""; };
+  $("#dlBtn").onclick = () => exportItems(state.items.filter(i => i.selected));
+  $("#hero .dropzone").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); $("#file").click(); } });
+  const links = [...document.querySelectorAll("[data-spy] a")];
+  const spy = new IntersectionObserver(entries => entries.forEach(en => {
+    if (!en.isIntersecting) return;
+    links.forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + en.target.id ? "true" : "false"));
+  }), { rootMargin: "-30% 0px -60% 0px" });
+  ["fonts", "tester-sec", "features", "glyphs"].forEach(id => spy.observe(document.getElementById(id)));
+
+  let depth = 0; const drop = $("#drop");
+  addEventListener("dragenter", e => { if ([...e.dataTransfer.types].includes("Files")) { depth++; drop.classList.remove("hidden"); } });
+  addEventListener("dragleave", () => { if (--depth <= 0) { depth = 0; drop.classList.add("hidden"); } });
+  addEventListener("dragover", e => e.preventDefault());
+  addEventListener("drop", e => { e.preventDefault(); depth = 0; drop.classList.add("hidden"); if (e.dataTransfer.files.length) addFiles(e.dataTransfer.files); });
+
+  $("#list").addEventListener("click", e => {
+    const row = e.target.closest(".row"); if (!row) return;
+    const it = byId(row.dataset.id);
+    if (e.target.closest("[data-rm]")) {
+      state.items = state.items.filter(i => i !== it);
+      try { py && py.FS.unlink("/in/" + it.id); } catch {}
+      if (state.active === it.id) { state.active = state.items[0]?.id || null; state.glyph = null; }
+      renderAll(); return;
+    }
+    if (e.target.closest("[data-dl]")) { exportItems([it]); return; }
+    if (e.target.closest("[data-check]")) { it.selected = !it.selected; renderList(); return; }
+    if (state.active !== it.id) { state.active = it.id; state.glyph = null; renderAll(); }
+  });
+  $("#list").addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.classList.contains("row")) { e.preventDefault(); e.target.click(); } });
+  $("#clash").addEventListener("click", e => { if (e.target.closest("#fixBtn")) fixClashes(); });
+  $("#selAll").onclick = () => { const r = state.items.filter(i => i.status === "ready"); const all = r.every(i => i.selected); r.forEach(i => i.selected = !all); renderList(); };
+
+  const t = $("#tester");
+  document.addEventListener("selectionchange", () => {
+    const s = getSelection(); if (s.rangeCount && t.contains(s.anchorNode)) savedRange = s.getRangeAt(0).cloneRange();
+  });
+  t.addEventListener("input", () => { if (state.preset) { state.preset = null; renderControls(); } });
+  t.addEventListener("paste", e => { e.preventDefault(); document.execCommand("insertText", false, e.clipboardData.getData("text/plain")); });
+  $("#size").oninput = e => { state.size = +e.target.value; styleTester(); };
+  $("#lead").oninput = e => { state.lead = +e.target.value; styleTester(); };
+  $("#track").oninput = e => { state.track = +e.target.value; styleTester(); };
+
+  $("#axesBox").addEventListener("input", e => {
+    const tag = e.target.dataset.axis; if (!tag) return;
+    const it = active(); it.axis[tag] = +e.target.value;
+    $("#axv_" + CSS.escape(tag)).textContent = +(+e.target.value).toFixed(2);
+    renderPicker();
+    styleTester();
+  });
+  $("#axesBox").addEventListener("click", e => {
+    const it = active();
+    if (e.target.closest("#axReset")) { it.info.axes.forEach(a => it.axis[a.tag] = a.def); renderTester(); }
+  });
+
+  $("#styleDD .dd-btn").addEventListener("click", () => {
+    const open = $("#ddMenu").classList.toggle("hidden") === false;
+    $("#styleDD .dd-btn").setAttribute("aria-expanded", open);
+    if (open) ($("#ddMenu [aria-selected=true]") || $("#ddMenu button"))?.focus();
+  });
+  $("#ddMenu").addEventListener("click", e => {
+    const b = e.target.closest("[data-k]"); if (!b) return;
+    const it = active(), o = pickerOptions(it)[+b.dataset.k];
+    closePicker();
+    if (o.kind === "inst") { Object.assign(it.axis, it.info.instances[o.i].coords); renderTester(); }
+    else if (o.id !== it.id) { state.active = o.id; state.glyph = null; renderAll(); }
+  });
+  $("#ddMenu").addEventListener("keydown", e => {
+    const items = [...$("#ddMenu").querySelectorAll("button")], i = items.indexOf(document.activeElement);
+    if (e.key === "ArrowDown") { e.preventDefault(); items[Math.min(items.length - 1, i + 1)]?.focus(); }
+    if (e.key === "ArrowUp") { e.preventDefault(); items[Math.max(0, i - 1)]?.focus(); }
+  });
+  document.addEventListener("click", e => { if (!e.target.closest("#styleDD")) closePicker(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("#ddMenu").classList.contains("hidden")) { closePicker(); $("#styleDD .dd-btn").focus(); } });
+
+  $("#instOne").onclick = async () => {
+    const it = active(); if (!it?.info?.axes.length) return;
+    const inst = it.info.instances.find(n => instOn(it, n));
+    const name = inst ? inst.name : weightStyle(it.axis.wght ?? 400, false, false) + " Custom";
+    const n = await addInstances(it, [{ name, coords: { ...it.axis } }]);
+    renderList();
+    toast(n ? `Added ${it.edits.family} ${name} to Styles as a static font.` : `${it.edits.family} ${name} is already in Styles.`, !n);
+  };
+  $("#instAll").onclick = async () => {
+    const it = active(); if (!it?.info?.instances.length) return;
+    const b = $("#instAll"), label = b.textContent; b.textContent = "Creating…"; b.disabled = true;
+    const n = await addInstances(it, it.info.instances.map(x => ({ name: x.name, coords: x.coords })));
+    b.textContent = label; b.disabled = false;
+    if (n) it.selected = false;
+    renderList();
+    toast(n ? `Added ${n} static fonts to Styles. The variable file is deselected so only the statics download.` : "All instances are already in Styles.", !n);
+  };
+
+  $("#tiles").addEventListener("click", e => {
+    const b = e.target.closest("[data-feat-tag]"); if (!b) return;
+    const it = active(), tag = b.dataset.featTag;
+    it.feat[tag] = it.feat[tag] ? 0 : 1;
+    b.setAttribute("aria-pressed", it.feat[tag] ? "true" : "false");
+    styleTester(); refreshFeatureStyles();
+  });
+  $("#featReset").onclick = () => { const it = active(); if (!it?.info) return; Object.keys(it.feat).forEach(k => it.feat[k] = DEFAULT_ON.has(k) ? 1 : 0); renderTiles(); styleTester(); refreshFeatureStyles(); };
+
+  $("#grid").addEventListener("click", e => {
+    const c = e.target.closest(".cell"); if (!c) return;
+    const prev = $("#grid .cell.sel"); prev && prev.classList.remove("sel");
+    c.classList.add("sel"); state.glyph = +c.dataset.cp; renderGlyphCard();
+  });
+  $("#glyphSearch").addEventListener("input", e => { state.glyphQuery = e.target.value; renderGlyphs(); });
+  $("#glyphCard").addEventListener("click", e => {
+    const it = active(), ch = String.fromCodePoint(state.glyph);
+    if (e.target.closest("[data-ins-base]")) { insertIntoTester(document.createTextNode(ch)); toast(`Added ${ch} to the tester.`); return; }
+    const b = e.target.closest("[data-alt]"); if (!b) return;
+    const a = uniqAlts(it.info.alternates[state.glyph])[+b.dataset.alt];
+    const s = document.createElement("span");
+    s.className = "alt"; s.contentEditable = "false"; s.dataset.feat = `"${a.tag}" ${a.v}`; s.dataset.font = it.id; s.title = a.g; s.textContent = ch;
+    insertIntoTester(s);
+    toast(`Added ${a.g} to the tester.`);
+  });
+
+  $("#nameForm").addEventListener("input", e => {
+    const k = e.target.dataset.name; if (!k) return;
+    const it = active();
+    it.edits[k] = k === "weight" ? Math.max(1, Math.min(1000, parseInt(e.target.value, 10) || 400)) : e.target.value;
+    nameChanged();
+  });
+  $("#nameForm").addEventListener("click", e => {
+    const it = active();
+    if (e.target.closest("#resetNames")) { it.edits = { ...it.orig }; renderNames(); nameChanged(); }
+    if (e.target.closest("#autoStyle")) { it.edits.style = weightStyle(it.edits.weight, it.edits.italic, false); renderNames(); nameChanged(); }
+    if (e.target.closest("#applyFam")) {
+      const sel = state.items.filter(i => i.selected && i.status === "ready" && i !== it);
+      sel.forEach(i => i.edits.family = it.edits.family);
+      renderList(); toast(sel.length ? `Set the family to “${it.edits.family}” on ${sel.length} more font${sel.length > 1 ? "s" : ""}.` : "Select other fonts in the list first.", !sel.length);
+    }
+  });
+}
+function refreshFeatureStyles() {
+  const it = active();
+  document.querySelectorAll("#tiles [data-feat-tag]").forEach(tile => {
+    const tag = tile.dataset.featTag, spans = tile.querySelectorAll(".demo [data-var]");
+    spans[0].setAttribute("style", fontStyle(it, `"${tag}" 0`)); spans[1].setAttribute("style", fontStyle(it, `"${tag}" 1`));
+  });
+  const g = $("#grid"); if (g) g.style.fontFeatureSettings = featCSS(it);
+  const big = $("#glyphCard .big"); if (big) big.style.fontFeatureSettings = featCSS(it);
+}
+
+bind(); renderControls(); renderAll(); boot();
+})();
+</script>
+</body></html>
